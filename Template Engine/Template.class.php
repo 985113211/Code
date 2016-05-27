@@ -27,6 +27,7 @@ class Template
 	{
 		$this->debug['begin'] = microtime(true);
 		$this->arrayConfig = array_merge($this->arrayConfig, $arrayConfig);
+		$this->getPath();
 
 		if(!is_dir($this->arrayConfig['templateDir']))
 		{
@@ -46,6 +47,12 @@ class Template
 		}
 
 		include('Compile.class.php');
+	}
+
+	public function getPath()
+	{
+		$this->arrayConfig['templateDir'] = strstr(realpath($this->arrayConfig['templateDir']), '\\', '/').'/';
+		$this->arrayConfig['compileDir'] = strstr(realpath($this->arrayConfig['compileDir'])), '\\', '/').'/';
 	}
 
 	/**
