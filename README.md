@@ -7,3 +7,8 @@ Template Engine:
 database :
   这是一个简单的数据库实现，源代码来自《PHP核心技术与最佳实践》，可以帮助我们更好的理解hash算法相关的知识。
 
+<<<<<<< HEAD
+=======
+bootstrap:
+  bootstrap是一个相对简单而又强大的 前端框架，可以满足正常的需求。
+>>>>>>> 088783911a1f49dbdf9fa8eb36c33625c9ab84e3
